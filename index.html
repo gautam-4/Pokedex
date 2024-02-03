@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search a Pokemon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <style>
+        #pokemonDetails img {
+            height: 275px;
+        }
+
+        #abilities {
+            margin-top: 0.5em;
+        }
+
+        #pokeInfo {
+            background-color: rgba(80, 69, 69, 0.2);
+            color: rgb(45, 45, 45);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: cursive;
+            font-size: 1.2rem;
+        }
+
+        #pokemonDetails {
+            background-color: rgba(45, 55, 65, 0.228);;
+            margin-top: 10px;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 1px 1px 5px black;
+        }
+        #pokemonDetails li{
+            padding-left: 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-col items-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white mt-7">Search a pokemon</h1>
+        <div class="flex w-full justify-center items-end mb-6">
+            <div class="relative mr-4 md:w-full lg:w-2/3 xl:w-1/2 w-2/4">
+                <label for="hero-field" class="leading-7 text-sm text-gray-400">Enter a pokemon</label>
+                <input type="text" id="pokemon" name="hero-field"
+                    class="w-full bg-gray-800 rounded bg-opacity-40 border border-gray-700 focus:ring-2 focus:ring-yellow-900 focus:bg-transparent focus:border-yellow-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <button onclick="fetchPokemon()" class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Search</button>
+        </div>
+
+        <div class="flex lg:flex-row md:flex-col text-gray-300" id="pokemonDetails" style="display:none">
+            <img src="" id="pokeImg" alt="pokemon image" style="display:none">
+            <div id="pokeInfo" style="display:none;">
+                <div id="name"></div>
+                <div id="type"></div>
+                <div id="weight"></div>
+                <div id="height"></div>
+                <div id="stats"></div>
+                <div id="abilities"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
